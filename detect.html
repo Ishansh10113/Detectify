@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Detect Spam</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <h1>Spam Detection System</h1>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/detect">Detect Spam</a></li>
+                <li><a href="/history">History</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="detect-section">
+            <h2>Check for Spam</h2>
+
+            <form action="/detect_call" method="post" class="detect-form">
+                <input type="text" name="phone" placeholder="Enter phone number" required>
+                <button type="submit">Check Call</button>
+            </form>
+
+            <form action="/detect_text" method="post" class="detect-form">
+                <textarea name="message" placeholder="Enter message" required></textarea>
+                <button type="submit">Check Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Spam Detection System | Designed by Last Minute Engineers</p>
+    </footer>
+</body>
+</html>

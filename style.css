@@ -1,0 +1,243 @@
+/* Apply a dark theme with smooth UI */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #121212;
+    color: white;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Navbar styling */
+.navbar {
+    width: 100%;
+    background: #222;
+    padding: 15px 0;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+.navbar ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.navbar li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.navbar a {
+    color: #ffcc00;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+}
+
+/* Center content */
+.container {
+    max-width: 800px;
+    padding: 25px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+    margin: 100px auto;
+}
+
+/* Hero section */
+.hero {
+    padding: 50px 0;
+}
+
+.hero h2 {
+    font-size: 32px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+/* Features section */
+.features {
+    padding: 40px 0;
+}
+
+.feature-grid {
+    display: flex;
+    justify-content: space-around;
+    text-align: left;
+}
+
+.feature {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+    width: 30%;
+}
+
+/* Team section */
+.team-grid {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.team-member {
+    width: 30%;
+}
+
+.team-member img {
+    width: 100px;
+    border-radius: 50%;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    background: #ffcc00;
+    color: black;
+    padding: 10px 20px;
+    margin: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background: #ffdd44;
+}
+
+/* Footer */
+footer {
+    margin-top: 50px;
+    background: #222;
+    padding: 20px;
+}
+/* Technology Cards */
+.tech-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.tech-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.tech-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px rgba(255, 204, 0, 0.4);
+}
+
+.tech-card h4 {
+    color: #ffcc00;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.tech-card p {
+    font-size: 15px;
+    color: #ddd;
+}
+/* Team Section Card Styling */
+.team-grid-cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.team-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    width: 200px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.team-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px rgba(255, 204, 0, 0.4);
+}
+
+.team-card h4 {
+    margin-top: 15px;
+    color: #ffcc00;
+}
+
+.avatar {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+    border-radius: 50%;
+    background-color: #ffcc00;
+    color: black;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+}
+.detect-section {
+    background-color: #1f1f1f;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.1);
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.detect-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.detect-form input,
+.detect-form textarea {
+    padding: 0.75rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.detect-form button {
+    background-color: #ffcc00;
+    color: #000;
+    border: none;
+    padding: 0.75rem;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.detect-form button:hover {
+    background-color: #e6b800;
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Detection History</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <h1>Spam Detection System</h1>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/detect">Detect Spam</a></li>
+                <li><a href="/history">History</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1>📜 Detection History</h1>
+        
+        <h2>📞 Call History</h2>
+        {% if call_history %}
+            <table>
+                <tr>
+                    <th>Phone Number</th>
+                    <th>Prediction</th>
+                    <th>Confidence</th>
+                    <th>Timestamp</th>
+                </tr>
+                {% for entry in call_history %}
+                <tr>
+                    <td>{{ entry.phone_number }}</td>
+                    <td>{{ entry.prediction }}</td>
+                    <td>{{ (entry.confidence * 100)|int }}%</td>
+                    <td>{{ entry.timestamp }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        {% else %}
+            <p>No call history found.</p>
+        {% endif %}
+
+        <h2>📩 Message History</h2>
+        {% if message_history %}
+            <table>
+                <tr>
+                    <th>Message</th>
+                    <th>Prediction</th>
+                    <th>Confidence</th>
+                    <th>Timestamp</th>
+                </tr>
+                {% for entry in message_history %}
+                <tr>
+                    <td>{{ entry.message }}</td>
+                    <td>{{ entry.prediction }}</td>
+                    <td>{{ (entry.confidence * 100)|int }}%</td>
+                    <td>{{ entry.timestamp }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        {% else %}
+            <p>No message history found.</p>
+        {% endif %}
+    </div>
+</body>
+</html>
